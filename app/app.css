@@ -1,9 +1,12 @@
 /* app css stylesheet */
 
+body {
+  margin: 1em;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
   padding: 0 0 0.5em;
 }
 
@@ -27,4 +30,17 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+.content {
+  padding: 0.5em 0;
+}
+
+input {
+  width: 50px;
+}
+
+.footer {
+  border-top: 0.1em solid black;
+  padding: 0.5em 0;
 }

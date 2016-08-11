@@ -1,0 +1,24 @@
+<div>
+  <ct-grid grid='vm.game.grid'></ct-grid>
+  <div ng-show='vm.game.isOver()'>
+    <p><strong>GAME OVER!</strong></p>
+    <button ng-click='vm.game.newGame()'>New game</button>
+  </div>
+  <div ng-show='!vm.game.isOver()'>
+    <form ng-submit='vm.doMove(vm.move)'>
+        <p>Go {{vm.game.current | uppercase}} <input ng-model='vm.move' autofocus />
+        <input type='submit' value='Go' /></p>
+    </form>
+    <p>Accepted moves</p>
+    <ul>
+      <li ng-repeat='(move, index) in vm.game.moves track by $index'>
+        {{move}}
+      </li>
+    </ul>
+    <p>
+      <button ng-click='vm.save()'>Save</button> 
+      <button ng-click='vm.load()'>Load</button>
+    </p>
+  </div>
+</div>
+
